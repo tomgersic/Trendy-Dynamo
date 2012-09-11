@@ -15,18 +15,18 @@ const KEYWORD  = "crm,cloud,touch,forcedotcom,modelmetricsinc,modelfx,salesforce
 
 //Production
 var twit = new Twitter({
-  consumer_key: TWITTER_CONSUMER_KEY,
-  consumer_secret: TWITTER_CONSUMER_SECRET,
-  access_token_key: TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: TWITTER_ACCESS_TOKEN_SECRET
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
 //Development
 /*var twit = new Twitter({
-  consumer_key: DEV_TWITTER_CONSUMER_KEY,
-  consumer_secret: DEV_TWITTER_CONSUMER_SECRET,
-  access_token_key: DEV_TWITTER_ACCESS_TOKEN_KEY,
-  access_token_secret: DEV_TWITTER_ACCESS_TOKEN_SECRET
+  consumer_key: process.env.DEV_TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.DEV_TWITTER_CONSUMER_SECRET,
+  access_token_key: process.env.DEV_TWITTER_ACCESS_TOKEN_KEY,
+  access_token_secret: process.env.DEV_TWITTER_ACCESS_TOKEN_SECRET
 });*/
 
 twit.verifyCredentials(function (err, data) {
