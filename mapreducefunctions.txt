@@ -1,0 +1,19 @@
+function() {
+	var tags = this.text.split(" ");
+
+    for (index in tags) {
+	var str = tags[index].replace(/[\W]/g,'').toLowerCase();
+       if(str != null && str.length > 3)
+        emit(str, 1);
+    }
+}
+
+function(previous, current) {
+    var count = 0;
+
+    for (index in current) {
+        count += current[index];
+    }
+
+    return count;
+}
