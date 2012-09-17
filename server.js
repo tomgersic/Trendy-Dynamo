@@ -71,8 +71,7 @@ twit.stream('statuses/filter',  {'track':KEYWORD}, function(stream) {
         console.log(dataToSave);
       }
       //else console.log("Tweet saved");
-    });
-
+    });    
 
     //var tweet = strencode(data.text);
   });
