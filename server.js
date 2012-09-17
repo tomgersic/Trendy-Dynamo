@@ -60,6 +60,13 @@ twit.stream('statuses/filter',  {'track':KEYWORD}, function(stream) {
         console.log(err);
         console.log(dataToSave);
       }
+    db.put('df12tweet',dataToSave).save(function(err, saved) {
+      if( err ) 
+      {
+        console.log("Tweet not saved");
+        console.log(err);
+        console.log(dataToSave);
+      }      
       //else console.log("Tweet saved");
   });
 
